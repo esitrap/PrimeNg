@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient } from '@angular/common/http'
 import { Customer } from './customer';
 @Injectable({
   providedIn: 'root'
@@ -7,5 +7,5 @@ import { Customer } from './customer';
 export class CustomerService {
 private customerUrl :'api/customer'
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 }
