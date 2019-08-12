@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http' 
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
+import { CustomerService } from './customers/customer.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     CustomerListComponent
   ],
   imports: [
@@ -19,7 +19,7 @@ import { CustomerListComponent } from './customers/customer-list/customer-list.c
     TableModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
