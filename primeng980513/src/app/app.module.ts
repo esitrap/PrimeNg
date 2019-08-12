@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http' 
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
 import { CustomerService } from './customers/customer.service';
-
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { CustomerService } from './customers/customer.service';
     BrowserModule,
     AppRoutingModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]
