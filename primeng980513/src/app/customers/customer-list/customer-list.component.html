@@ -14,5 +14,11 @@
         </tr>
     </ng-template>
 </p-table>
-<button pButton type="button" label="Click" ></button>
+<div>
+<label>customer name:
+<input #customerName />
+</label>
+<button pButton type="add(customerName.value); customerName.value=''" label="Add" >
+</button>
+</div>
 

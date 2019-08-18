@@ -18,5 +18,11 @@ export class CustomerListComponent implements OnInit {
         this.customers = cust;
       });
   }
-
+add(name : string): void {
+  name =name.trim();
+  if (!name) {return;}
+  this.customerService.addcustomer({name} as Customer).subscribe(
+    customers => { this.customers.push(customers)} 
+  )
+}
 }
