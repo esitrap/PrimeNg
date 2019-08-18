@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CustomerService {
-  [x: string]: any;
   private customerUrl = 'api/customers'
   httpOptions = {
 headers: new HttpHeaders({ 'Content-Type': 'application/json' })
