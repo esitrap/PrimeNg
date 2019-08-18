@@ -5,21 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http' 
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
-
+import { CustomerService } from './customers/customer.service';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     CustomerListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

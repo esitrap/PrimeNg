@@ -8,12 +8,15 @@ import { CustomerService } from '../customer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  customer: Customer[];
-  
-  constructor(private customerService : CustomerService) { }
+  customers: Customer[];
+
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit() {
-    
+    this.customerService.getcustomers()
+      .subscribe(cust => {
+        this.customers = cust;
+      });
   }
 
 }
