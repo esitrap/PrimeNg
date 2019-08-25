@@ -7,18 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class CustomerService {
   private customerUrl = 'api/customers'
-  httpOptions = {
-headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
+
   constructor(private http: HttpClient) { }
 
   getcustomers(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.customerUrl);
   };
-  
-  addcustomers(customer:Customer[]): Observable<Customer[]> {
-    return this.http.post<Customer>(this.customerUrl,customer,this.httpOptions)
-      };
-   
-  }   
+
+  addcustomer(customer: Customer): Observable<any> {
+    return this.http.post(this.customerUrl, customer);
+  };
+}
 

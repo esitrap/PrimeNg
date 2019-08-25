@@ -18,11 +18,16 @@ export class CustomerListComponent implements OnInit {
         this.customers = cust;
       });
   }
-add(name : string): void {
-  name =name.trim();
-  if (!name) {return;}
-  this.customerService.addcustomers({name} as Customer).subscribe(
-    cust => { this.customers.push(cust)} 
-  );
-}
+
+  add (event: string) {
+    if (!event) { return; }
+    this.customerService.addcustomer({
+      mobileNo: '',
+      name: event,
+      id: '25c694c3-4d0e-4445-908d-cf5009905738'
+    }).subscribe(
+      cust => {
+        debugger; this.customers.push(cust); }
+    );
+  }
 }

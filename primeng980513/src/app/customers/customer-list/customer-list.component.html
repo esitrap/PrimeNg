@@ -1,4 +1,4 @@
-  <p-table [value]="customers">
+<p-table [value]="customers">
     <ng-template pTemplate="header">
         <tr>
             <!-- <th>id</th> -->
@@ -15,10 +15,9 @@
     </ng-template>
 </p-table>
 <div>
-<label>customer name:
-<input #customerName />
-</label>
-<button pButton type="add(customerName.value); customerName.value=''" label="Add" >
-</button>
-</div>
+    <label>customer name:
+        <input #customerName type="text" />
+    </label>
 
+</div>
+<button pButton type="button" class="ui-button-raised ui-button-rounded" label="add" (click)="add(customerName.value)"></button>
